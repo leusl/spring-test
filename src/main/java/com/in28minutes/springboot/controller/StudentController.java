@@ -26,7 +26,7 @@ public class StudentController {
 		return studentService.retrieveCourses(student);
 	}
 
-	@PostMapping("/students/{studentId}/courses")
+	@GetMapping("/students/{studentId}/cours")
 	public ResponseEntity<Void> registerStudentsForCourse(
 			@PathVariable String studentId, @RequestBody Course newCourse) {
 
@@ -43,7 +43,7 @@ public class StudentController {
 
 	@GetMapping("/students/{studentId}/courses/{courseId}")
 	public Course retrieveDetailsForCourse(@PathVariable String studentId,
-			@PathVariable String courseId) {
+			@PathVariable String courseId, @PathVariable int id) {
 		return studentService.retrieveCourse(studentId, courseId);
 	}
 

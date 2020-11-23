@@ -7,6 +7,7 @@ public class Course {
 	private String name;
 	private String description;
 	private List<String> steps;
+	private int testLimit;
 
 	// Needed by Caused by: com.fasterxml.jackson.databind.JsonMappingException:
 	// Can not construct instance of com.in28minutes.springboot.model.Course:
