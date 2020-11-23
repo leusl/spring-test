@@ -22,12 +22,12 @@ public class StudentController {
 	private StudentService studentService;
 
 	@GetMapping("/students/{studentId}/courses")
-	public List<Course> retrieveCoursesForStudent(@PathVariable String studentId) {
-		return studentService.retrieveCourses(studentId);
+	public List<Course> retrieveCoursesForStudent(@PathVariable String student) {
+		return studentService.retrieveCourses(student);
 	}
 
 	@PostMapping("/students/{studentId}/courses")
-	public ResponseEntity<Void> registerStudentForCourse(
+	public ResponseEntity<Void> registerStudentsForCourse(
 			@PathVariable String studentId, @RequestBody Course newCourse) {
 
 		Course course = studentService.addCourse(studentId, newCourse);
